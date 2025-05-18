@@ -1,14 +1,155 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>客户流失分析</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>客户流失分析报告</title>
+    <style>
+        body {
+            font-family: 'Apple SD Gothic Neo', sans-serif;
+            margin: 40px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+        header {
+            text-align: center;
+            padding: 20px 0;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 2em;
+            margin-top: 40px;
+        }
+        h3 {
+            font-size: 1.5em;
+            margin-top: 30px;
+        }
+        p, li {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border-radius: 8px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            color: #777;
+        }
+        a {
+            color: #007BFF;
+        }
+        a:hover {
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-    <h1>客户流失分析项目</h1>
-    <p>点击下面的链接查看完整报告：</p>
-    <a href="客户流失分析报告.html">查看客户流失分析报告</a>
-    <!-- 如果您重命名了文件，使用新的文件名 -->
-    <a href="churn_analysis_report.html">查看客户流失分析报告</a>
+    <div class="container">
+        <header>
+            <h1>客户流失分析报告</h1>
+            <p>2023年10月</p>
+        </header>
+
+        <div class="card">
+            <h2>概述</h2>
+            <p>本报告旨在分析银行客户流失数据，识别导致客户流失的关键因素，并提供数据驱动的见解。数据集包含1000条客户记录，包括客户ID、姓氏、信用评分、地理位置、性别、年龄、任期、余额、产品数量、是否有信用卡、是否活跃会员、估计薪资和是否流失（Exited）等字段。</p>
+        </div>
+
+        <div class="card">
+            <h2>数据分析结果</h2>
+            <h3>总体流失率</h3>
+            <p>在1000名客户中，总共有203名客户流失，总体流失率为20.3%。</p>
+
+            <h3>按地理位置划分</h3>
+            <ul>
+                <li><strong>法国:</strong> 流失率约为16%。</li>
+                <li><strong>德国:</strong> 流失率约为32%。</li>
+                <li><strong>西班牙:</strong> 流失率约为17%。</li>
+            </ul>
+            <p>德国的流失率明显高于其他国家，表明地理位置对客户流失有显著影响。</p>
+            <img src="地理客户流失率.png" alt="按地理位置划分的客户流失率">
+
+            <h3>按性别划分</h3>
+            <ul>
+                <li><strong>女性:</strong> 流失率为24%。</li>
+                <li><strong>男性:</strong> 流失率为19%。</li>
+            </ul>
+            <p>女性客户的流失率高于男性客户，表明性别在客户流失中也起到一定作用。</p>
+            <img src="性别客户流失率.png" alt="按性别划分的客户流失率">
+
+            <h3>按年龄划分</h3>
+            <p>年龄分布与流失率的关系表明：</p>
+            <ul>
+                <li>年龄在50岁以上的客户流失率较高。</li>
+                <li>45岁左右的客户流失率达到峰值。</li>
+            </ul>
+            <p>这表明中年及老年客户群体更有可能流失，需要特别关注。</p>
+            <img src="年龄客户流失率.png" alt="按年龄划分的客户流失率">
+
+            <h3>按产品数量划分</h3>
+            <ul>
+                <li><strong>0个产品:</strong> 流失率为25%。</li>
+                <li><strong>1个产品:</strong> 流失率为22%。</li>
+                <li><strong>2个产品:</strong> 流失率为26%。</li>
+                <li><strong>3个产品:</strong> 流失率为35%。</li>
+                <li><strong>4个产品:</strong> 流失率高达50%。</li>
+            </ul>
+            <p>拥有更多产品的客户流失率更高，这可能表明客户在使用多个产品时体验不佳。</p>
+            <img src="产品数量客户流失率.png" alt="按产品数量划分的客户流失率">
+
+            <h3>按活跃会员状态划分</h3>
+            <ul>
+                <li><strong>非活跃会员:</strong> 流失率为29%。</li>
+                <li><strong>活跃会员:</strong> 流失率为16%。</li>
+            </ul>
+            <p>活跃会员的流失率明显较低，表明提升客户活跃度可以有效降低流失率。</p>
+            <img src="活跃会员状态客户流失率.png" alt="按活跃会员状态划分的客户流失率">
+        </div>
+
+        <div class="card">
+            <h2>结论与建议</h3>
+            <h3>关键发现</h3>
+            <ol>
+                <li><strong>德国客户流失率显著高于法国和西班牙。</strong></li>
+                <li><strong>女性客户的流失率高于男性客户。</strong></li>
+                <li><strong>中年及老年客户的流失率较高。</strong></li>
+                <li><strong>拥有多个产品的客户流失率更高。</strong></li>
+                <li><strong>非活跃会员的流失率显著高于活跃会员。</strong></li>
+            </ol>
+
+            <h3>建议</h3>
+            <ol>
+                <li><strong>针对德国市场制定特别营销策略:</strong> 需要深入调查德国客户的流失原因，并制定有针对性的客户保留策略。</li>
+                <li><strong>提升女性客户的体验:</strong> 分析女性客户流失率较高的原因，并优化服务以提高满意度。</li>
+                <li><strong>关注中年及老年客户群体:</strong> 为这一群体提供更个性化的金融产品和服务。</li>
+                <li><strong>优化多产品持有客户的体验:</strong> 分析为何产品数量多的客户流失率更高，改进产品组合和服务流程。</li>
+                <li><strong>提高客户活跃度:</strong> 推出激励计划，鼓励客户更多地使用银行服务，从而降低流失率。</li>
+            </ol>
+        </div>
+
+        <footer>
+            <p>© 2023 客户流失分析报告</p>
+        </footer>
+    </div>
 </body>
 </html>
