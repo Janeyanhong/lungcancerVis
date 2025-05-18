@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>肺癌数据分析报告</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: #f5f5f7;
+            color: #1d1d1f;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #000000;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        main {
+            padding: 2rem;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        section {
+            background-color: white;
+            border-radius: 14px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            padding: 2rem;
+        }
+
+        h1, h2 {
+            color: #1d1d1f;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 1rem auto;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            color: #888;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>肺癌数据分析报告</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>1. 肺癌患者性别分布</h2>
+            <p>根据图表显示，肺癌患者在性别上的分布是平均的，女性和男性各占一半。这表明在这份数据集中，性别并不是影响肺癌发生的一个显著因素。</p>
+            <img src="lung_cancer_gender_distribution.png" alt="肺癌患者性别分布">
+        </section>
+
+        <section>
+            <h2>2. 肺癌与吸烟情况</h2>
+            <p>根据图表显示，吸烟者（值为2）患肺癌的比例明显高于不吸烟者（值为1）。这表明吸烟与肺癌之间存在显著的相关性。</p>
+            <img src="lung_cancer_smoking.png" alt="肺癌与吸烟情况">
+        </section>
+
+        <section>
+            <h2>3. 肺癌与年龄分布</h2>
+            <p>根据图表显示，年龄较大的人群（值为2）患肺癌的比例明显高于年轻人群（值为1）。这表明年龄是一个与肺癌发生显著相关的因素。</p>
+            <img src="lung_cancer_age_distribution.png" alt="肺癌与年龄分布">
+        </section>
+
+        <section>
+            <h2>结论</h2>
+            <p>
+                1. <strong>性别</strong>：在这份数据集中，性别并不是影响肺癌发生的一个显著因素。<br>
+                2. <strong>吸烟情况</strong>：吸烟与肺癌之间存在显著的相关性，吸烟者更容易患上肺癌。<br>
+                3. <strong>年龄</strong>：年龄较大的人群更容易患上肺癌，年龄是一个与肺癌发生显著相关的因素。
+            </p>
+            <p>这些发现表明，预防肺癌的关键在于控制吸烟以及对高风险年龄群体进行定期筛查。</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023 数据分析报告</p>
+    </footer>
+</body>
+</html>
